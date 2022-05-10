@@ -92,5 +92,11 @@ def printer(m, data):
 
 
 data = load_caps()
-m = find_optimum(data.get("cap"))
-printer(m, data)
+max_cap = 0
+for i in range(1000):
+	m = find_optimum(data.get("cap"))
+	cur_cap = sum(m[0])
+	if cur_cap > max_cap:
+		max_cap = cur_cap
+		mem = m
+printer(mem, data)
