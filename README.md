@@ -1,1 +1,1 @@
-# BattaryTools
+# BatteryTools
